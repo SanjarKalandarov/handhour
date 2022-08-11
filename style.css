@@ -1,0 +1,102 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: lightblue;
+}
+.clok{
+    width: 300px;
+    height: 300px;
+    background-color: mediumturquoise;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+}
+.clok .raqam{
+    --rotation:  0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /*background-color: red;*/
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+}
+.clok .raqam1{
+    --rotation:30deg;
+}
+.clok .raqam2{
+    --rotation:60deg;
+}
+.clok .raqam3{
+    --rotation:90deg;
+}
+.clok .raqam4{
+    --rotation:120deg;
+}
+.clok .raqam5{
+    --rotation:150deg;
+}
+.clok .raqam6{
+    --rotation:180deg;
+}
+.clok .raqam7{
+    --rotation:210deg;
+}
+.clok .raqam8{
+    --rotation:240deg;
+}
+.clok .raqam9{
+    --rotation:270deg;
+}
+.clok .raqam10{
+    --rotation:300deg;
+}
+.clok .raqam11{
+    --rotation:330deg;
+}
+.clok .raqam12{
+    --rotation:360deg;
+}
+
+.clok .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+
+    background-color: black;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+.clok::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 11;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.clok .hand.second{
+    width: 3px;
+    height: 45%;
+    background-color:red;
+}
+.clok .hand.minute{
+    width: 10px;
+    height: 40%;
+    background-color: black;
+}
+clok .hand.hour{
+    width: 15px;
+    height: 35%;
+    background-color: black;
+}
